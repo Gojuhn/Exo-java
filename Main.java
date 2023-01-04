@@ -1,7 +1,16 @@
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Here is your card : ");
+        int player1 = randomCard();
+        printCard(player1);
 
-        printCard(randomCard());
+        System.out.println("Here is the computer  card : ");
+        int player2 = randomCard();
+        while (player1 == player2){
+            player2 = randomCard();
+        }
+
+        printCard(player2);
 
     }
 
