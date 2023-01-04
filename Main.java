@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         System.out.println("Here is your card : ");
         int player1 = randomCard();
         printCard(player1);
@@ -12,6 +15,21 @@ public class Main {
 
         printCard(player2);
 
+        System.out.println("Now the dealer will draw 5 cards, Press enter to continue : ");
+        String reponse = input.nextLine();
+        if (reponse.equals("")){
+
+            System.out.print("egal");
+
+
+        }else{
+            System.exit(0);
+        }
+
+
+
+        input.close();
+
     }
 
 
@@ -19,7 +37,7 @@ public class Main {
      *
      * @return
      *
-     * This function return a random number between From 1 to 5
+     * This function return a random number between From 1 to 13
      */
     public static int randomCard(){
         double number = (Math.random() * 12) + 1 ;
