@@ -19,11 +19,42 @@ public class Main {
         String reponse = input.nextLine();
         if (reponse.equals("")){
 
-            System.out.print("egal");
+
 
 
         }else{
             System.exit(0);
+        }
+        int countPlayer1 = 0;
+        int countPlayer2 = 0;
+        for (int i = 0 ; i<= 4 ; i++){
+            System.out.println("Card " + (i + 1)+"\n" +
+                    "\n");
+            int same = randomCard();
+            if (player1 == same){
+
+                countPlayer1++;
+
+            }
+            if (player2 == same){
+
+
+                countPlayer2++;
+            }
+            printCard(same);
+
+
+        }
+
+        System.out.println("Your number of matches : " + countPlayer1);
+        System.out.println("Computer number of matches : " + countPlayer2);
+        if (countPlayer1 == countPlayer2){
+            System.out.println("Egalité vous gagner tous les deux");
+        }else if (countPlayer1 > countPlayer2){
+
+            System.out.println("You win");
+        }else{
+            System.out.println("Computer win");
         }
 
 
@@ -31,6 +62,8 @@ public class Main {
         input.close();
 
     }
+
+
 
 
     /**
